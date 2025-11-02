@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory | Haidari Battery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Haidari Battery Logo">
+      <h1>Haidari Battery</h1>
+    </div>
+   
+  </header>
+
+ <!-- Mobile Menu Button --> 
+ <button class="menu-toggle" id="menuToggle">☰ Menu
+ </button> 
+ 
+<nav id="mainNav">
+   <a href="index.html">Dashboard</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="Sale(POS).html">Sales (POS)</a>
+    <a href="customer.html">Customers</a>
+    <a href="supplier.html">Suppliers</a>
+    <a href="report.html">Reports</a>
+    <a href="login.html">Login</a>
+    <a href="setting.html">Settings</a>
+  </nav>
+
+  <main>
+    <h2>Inventory Management</h2>
+
+    <!-- Form to Add Battery -->
+    <div class="inventory-form">
+      <h3>Add / Update Battery</h3>
+      <label>Brand:</label>
+      <input type="text" id="brand" placeholder="Ex: Osaka, AGS, Exide">
+
+      <label>Model:</label>
+      <input type="text" id="model" placeholder="Ex: NS200, GL-65">
+
+      <label>Capacity (Ah):</label>
+      <input type="number" id="capacity" placeholder="Ex: 60, 100, 150">
+
+      <label>Voltage (V):</label>
+      <input type="number" id="voltage" placeholder="12">
+
+      <label>Price (Rs):</label>
+      <input type="number" id="price" placeholder="Enter unit price">
+
+      <label>Stock Quantity:</label>
+      <input type="number" id="stock" placeholder="Enter current stock">
+
+      <label>Category:</label>
+      <select id="category">
+        <option value="Automotive">Automotive</option>
+        <option value="Inverter">Inverter</option>
+        <option value="Solar">Solar</option>
+      </select>
+
+      <label>Supplier:</label>
+      <input type="text" id="supplier" placeholder="Enter supplier name">
+
+      <button id="addBattery">Add Battery</button>
+    </div>
+
+    <!-- Inventory Table -->
+    <div class="inventory-list">
+      <h3>Battery Stock List</h3>
+      <input type="text" id="searchInventory" placeholder="Search by brand or model">
+      <table id="inventoryTable">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Capacity</th>
+            <th>Voltage</th>
+            <th>Price (Rs)</th>
+            <th>Stock</th>
+            <th>Category</th>
+            <th>Supplier</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="java.js"></script>
+</body>
+</html>
