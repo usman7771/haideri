@@ -1,0 +1,1632 @@
+/*index.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/* ==========================
+   THEME BASICS
+========================== */
+:root {
+  --bg-light: #f8f9fa;
+  --bg-dark: #1e1e1e;
+  --text-light: #000;
+  --text-dark: #f5f5f5;
+  --primary: #007bff;
+  --card-bg: #ffffff;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-theme {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* ==========================
+   HEADER
+========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+nav {
+  background: #343a40;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: block;
+}
+
+nav a:hover {
+  background: #007bff;
+}
+
+/* Mobile menu button (hidden by default) */
+.menu-toggle {
+  display: none;
+  width: 100%;
+  background: #343a40;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+main {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ==========================
+   RESPONSIVE STYLES
+========================== */
+
+/* Tablets and below */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    font-size: 0.95rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+}
+
+/*index.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/*products@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* PRODUCT SECTION */
+    .products {
+      margin-top: 30px;
+    }
+
+    .products h3 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #111;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #111;
+    }
+
+    .product-info p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .product-info .price {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+      }
+      nav.active {
+        display: flex;
+      }
+    }
+
+/*products@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+
+
+
+
+/*Sale(POS).html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* ==========================
+   SALES & BILLING (POS)
+========================== */
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* POS Layout */
+.pos-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 25px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT SIDE */
+.pos-left {
+  background: var(--bg-secondary, #f9f9f9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pos-left label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.pos-left input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.pos-left button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.pos-left button:hover {
+  background: #004d99;
+}
+
+.pos-left hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.pos-left h3 {
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+/* RIGHT SIDE */
+.pos-right {
+  background: var(--bg-secondary, #fff);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+#billTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#billTable th,
+#billTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#billTable th {
+  background: var(--primary);
+  color: white;
+  white-space: nowrap;
+}
+
+#billTable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+body.dark-theme #billTable tr:nth-child(even) {
+  background: #333;
+}
+
+/* BILL SUMMARY */
+.bill-summary {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.bill-summary p,
+.bill-summary h3 {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.bill-summary input {
+  width: 60px;
+  padding: 5px;
+  text-align: right;
+}
+
+/* ACTION BUTTONS */
+.bill-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.bill-actions button {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.bill-actions button:hover {
+  background: #004d99;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .pos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pos-left,
+  .pos-right {
+    width: 100%;
+  }
+
+  #billTable th,
+  #billTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .bill-actions {
+    flex-direction: column;
+  }
+
+  .bill-actions button {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  .pos-container {
+    padding: 15px;
+  }
+
+  .pos-left input,
+  .pos-right input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #billTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .bill-summary {
+    font-size: 14px;
+  }
+
+  .bill-summary input {
+    width: 50px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .pos-left,
+  .pos-right {
+    padding: 12px;
+  }
+
+  .pos-left label {
+    font-size: 13px;
+  }
+
+  .pos-left button {
+    font-size: 14px;
+  }
+
+  #billTable th,
+  #billTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .bill-actions button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .bill-summary h3 {
+    font-size: 1rem;
+  }
+}
+
+/*Sale(POS).html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+
+
+
+
+/*inventory.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/* ==========================
+   INVENTORY MANAGEMENT PAGE
+========================== */
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary, #007bff);
+  margin-bottom: 25px;
+}
+
+/* FORM SECTION */
+.inventory-form {
+  background: var(--card-bg, #fff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.inventory-form h3 {
+  color: var(--primary, #007bff);
+  margin-bottom: 15px;
+}
+
+.inventory-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.inventory-form input,
+.inventory-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.inventory-form button {
+  background: var(--primary, #007bff);
+  color: white;
+  border: none;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.inventory-form button:hover {
+  background: #0056b3;
+}
+
+/* INVENTORY LIST SECTION */
+.inventory-list {
+  background: var(--card-bg, #fff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.inventory-list h3 {
+  color: var(--primary, #007bff);
+  margin-bottom: 15px;
+}
+
+.inventory-list input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* TABLE */
+#inventoryTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#inventoryTable th,
+#inventoryTable td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#inventoryTable th {
+  background: var(--primary, #007bff);
+  color: #fff;
+  white-space: nowrap;
+}
+
+#inventoryTable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+body.dark-theme #inventoryTable tr:nth-child(even) {
+  background: #333;
+}
+
+/* STATUS TAGS */
+.status {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.status.in-stock {
+  background: #e6f4ea;
+  color: #198754;
+}
+
+.status.low-stock {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.out-of-stock {
+  background: #f8d7da;
+  color: #842029;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  main {
+    padding: 15px;
+  }
+
+  #inventoryTable th,
+  #inventoryTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .inventory-form,
+  .inventory-list {
+    padding: 15px;
+  }
+
+  .inventory-form input,
+  .inventory-form select,
+  .inventory-list input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #inventoryTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #inventoryTable th,
+  #inventoryTable td {
+    padding: 8px;
+  }
+
+  .inventory-form button {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+  }
+
+  .inventory-form,
+  .inventory-list {
+    padding: 12px;
+  }
+
+  .inventory-form label {
+    font-size: 13px;
+  }
+
+  .inventory-form input,
+  .inventory-form select {
+    font-size: 13px;
+  }
+
+  #inventoryTable th,
+  #inventoryTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .inventory-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+/*inventory.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+
+/*customer.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* ==========================
+   CUSTOMERS PAGE STYLES
+========================== */
+
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ====== Customer Form ====== */
+.customer-form {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.customer-form h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.customer-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.customer-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.customer-form button {
+  margin-top: 15px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.customer-form button:hover {
+  background: #0056b3;
+}
+
+/* ====== Customer List ====== */
+.customer-list {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.customer-list h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+#searchCustomer {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* ====== Customer Table ====== */
+#customerTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#customerTable th,
+#customerTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+
+#customerTable th {
+  background: var(--primary);
+  color: white;
+  white-space: nowrap;
+}
+
+#customerTable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+body.dark-theme #customerTable tr:nth-child(even) {
+  background: #333;
+}
+
+/* Scroll for smaller screens */
+.customer-list {
+  overflow-x: auto;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  main {
+    padding: 15px;
+  }
+
+  .customer-form, .customer-list {
+    padding: 18px;
+  }
+
+  #customerTable th,
+  #customerTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .customer-form label {
+    font-size: 14px;
+  }
+
+  .customer-form input {
+    font-size: 14px;
+  }
+
+  .customer-form button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #customerTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #customerTable th,
+  #customerTable td {
+    font-size: 13px;
+    padding: 7px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .customer-form,
+  .customer-list {
+    padding: 15px;
+  }
+
+  .customer-form h3,
+  .customer-list h3 {
+    font-size: 1.1rem;
+  }
+
+  #searchCustomer {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  #customerTable th,
+  #customerTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/*customer.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/*supplier.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* ==========================
+   SUPPLIERS PAGE STYLES
+========================== */
+
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ====== Supplier Form ====== */
+.supplier-form {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.supplier-form h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.supplier-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.supplier-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.supplier-form button {
+  margin-top: 15px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.supplier-form button:hover {
+  background: #0056b3;
+}
+
+/* ====== Supplier List ====== */
+.supplier-list {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.supplier-list h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+#searchSupplier {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* ====== Supplier Table ====== */
+#supplierTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#supplierTable th,
+#supplierTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+
+#supplierTable th {
+  background: var(--primary);
+  color: white;
+  white-space: nowrap;
+}
+
+#supplierTable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+body.dark-theme #supplierTable tr:nth-child(even) {
+  background: #333;
+}
+
+/* ====== Table Scroll (Mobile) ====== */
+.supplier-list {
+  overflow-x: auto;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  main {
+    padding: 15px;
+  }
+
+  .supplier-form, .supplier-list {
+    padding: 18px;
+  }
+
+  #supplierTable th,
+  #supplierTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .supplier-form label {
+    font-size: 14px;
+  }
+
+  .supplier-form input {
+    font-size: 14px;
+  }
+
+  .supplier-form button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #supplierTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #supplierTable th,
+  #supplierTable td {
+    font-size: 13px;
+    padding: 7px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .supplier-form,
+  .supplier-list {
+    padding: 15px;
+  }
+
+  .supplier-form h3,
+  .supplier-list h3 {
+    font-size: 1.1rem;
+  }
+
+  #searchSupplier {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  #supplierTable th,
+  #supplierTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/*supplier.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+
+/*report.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* ==========================
+   REPORTS PAGE STYLES
+========================== */
+
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ====== Report Filters ====== */
+.report-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: var(--card-bg);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.report-filters label {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.report-filters select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.report-filters button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.report-filters button:hover {
+  background: #0056b3;
+}
+
+/* ====== Report Cards ====== */
+.report-card {
+  background: var(--card-bg);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.report-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.report-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* ====== Reorder Table ====== */
+#reorderTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#reorderTable th,
+#reorderTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+
+#reorderTable th {
+  background: var(--primary);
+  color: white;
+}
+
+#reorderTable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+body.dark-theme #reorderTable tr:nth-child(even) {
+  background: #333;
+}
+
+/* ====== Print Button ====== */
+.print-btn {
+  display: block;
+  margin: 20px auto;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.print-btn:hover {
+  background: #004c9e;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablet view */
+@media (max-width: 992px) {
+  main {
+    padding: 15px;
+  }
+
+  .report-filters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .report-card {
+    padding: 18px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .report-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-filters label {
+    margin-bottom: 5px;
+  }
+
+  .report-filters select,
+  .report-filters button {
+    width: 100%;
+  }
+
+  .report-card {
+    padding: 15px;
+  }
+
+  #reorderTable th,
+  #reorderTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .print-btn {
+    width: 100%;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .report-card h3 {
+    font-size: 1rem;
+  }
+
+  .report-card p {
+    font-size: 14px;
+  }
+
+  #reorderTable th,
+  #reorderTable td {
+    font-size: 13px;
+    padding: 6px;
+  }
+}
+
+
+/*report.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+
+/*login.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* ==========================
+   LOGIN PAGE STYLES
+========================== */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--bg-light);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-theme .login-container {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.login-box {
+  background: var(--card-bg);
+  padding: 10px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: 0.3s ease-in-out;
+}
+
+.login-logo {
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+.login-box h2 {
+  color: var(--primary);
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.login-box label {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  margin: 10px 0 5px;
+}
+
+.login-box input,
+.login-box select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.login-box button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-box button:hover {
+  background: #0056b3;
+}
+
+.login-message {
+  margin-top: 10px;
+  color: red;
+  font-weight: 500;
+}
+
+/* ==========================
+   RESPONSIVE LOGIN
+========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .login-box {
+    padding: 35px 40px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .login-box {
+    max-width: 90%;
+    padding: 25px 30px;
+  }
+
+  .login-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .login-box button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+  }
+
+  .login-logo {
+    height: 60px;
+  }
+
+  .login-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .login-box input,
+  .login-box select {
+    font-size: 14px;
+  }
+
+  .login-box button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+
+
+/*login.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/*setting.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/* ==========================
+   SETTINGS PAGE STYLES
+========================== */
+
+.settings-form {
+  max-width: 900px;
+  margin: 30px auto;
+  background: var(--card-bg);
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.settings-form h3 {
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.form-section {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+input[type="color"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+input[type="color"] {
+  padding: 3px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: 0.3s ease;
+}
+
+.save-btn:hover {
+  background: #0056b3;
+}
+
+.save-message {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 15px;
+  color: green;
+}
+
+/* ==========================
+   RESPONSIVE SETTINGS PAGE
+========================== */
+
+/* Tablets and below */
+@media (max-width: 992px) {
+  .settings-form {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .settings-form h3 {
+    font-size: 1.2rem;
+  }
+
+  .save-btn {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  .settings-form {
+    padding: 15px;
+    gap: 25px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input,
+  .save-btn {
+    font-size: 14px;
+  }
+
+  .save-btn {
+    padding: 10px 15px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .settings-form {
+    gap: 20px;
+  }
+
+  .save-btn {
+    font-size: 13px;
+  }
+}
+
+
+/*setting.html@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
